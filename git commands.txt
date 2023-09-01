@@ -1,0 +1,28 @@
+install git
+open git bash with your personal folder
+
+' make folder 
+mkdir sahir
+
+'to go back
+cd ..
+
+'to goin
+cd sahir
+
+'to take start and make the repository for git
+git init
+
+'then config 
+git config --global user.name "sahir"
+git config --global user.email "sahir@gma"
+
+'to track all files
+git add -A 	
+
+
+'
+
+git rm sahir.html
+git status
+touch file name
