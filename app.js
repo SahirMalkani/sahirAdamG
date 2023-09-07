@@ -1,11 +1,33 @@
-alert("east or west");
+//chapter 3
 
-console.log("sahir");
-document.write("kashif");
+var vAge = "15";
 
+alert("i am" + vAge + " years old");
 
-var sahivar;
+var N = "14";
 
-sahivar = 5678
+alert("you have visited" + N + " times the page");
 
-alert(sahivar)
+var birthYear;
+
+birthYear = 1993;
+
+document.write("my birth year is " + birthYear);
+
+vtype = typeof birthYear;
+
+document.write("data type of my dec variable is \n" + vtype);
+
+//Q4
+
+var vWeb = "xyzclothingstore.com";
+
+var visitorName = "John Doe";
+
+var ProdName = "Nike T sihrts";
+
+var vQty = 24;
+
+document.write(
+  "<br>" + visitorName + " ordered " + vQty + " " + ProdName + " on " + vWeb
+);
