@@ -45,5 +45,5 @@ function displayTimer(){
  let s = seconds < 10 ? "0" + seconds : seconds;
  let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
 
- timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
+ timerRef.innerHTML =h+":"+m+":"+s +":"+ ms;
 }
