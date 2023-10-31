@@ -58,7 +58,7 @@ var score = 0;
 
 setInterval(function () {
 
-    timer.innerHTML = '${min} : ${sec}';
+    timer.innerHTML = `${min} : ${sec}`;
     sec--;
 
     if (sec < 0) {
@@ -70,6 +70,9 @@ setInterval(function () {
     if (min < 0) {
 
         min = 1
+        sec = 59;
+        disques()
+
     }
 
 
@@ -78,38 +81,90 @@ setInterval(function () {
 }, 1000)
 
 
+
+
+
+
+
 var i = 0;
 
 
 function disques() {
 
 
-
-
-    // for (var x = 0; x < getoption.length; x++) {
-
+    var getoption = document.getElementsByName("opt");
 
 
 
-    //     // if (getoption[x].Checked) {
-
-    //     //     var selecval = getoption[x].Value;
-    //     //     var selques = questions[index - 1]["question"];
-    //     //     var selans = questions[index - 1]["option${selecval}"];
-
-    //     //     var corans = questions[index - 1]["correctAns"];
-
-    //     //     if (selans == corans) {
-
-    //     //         alert(" (${score}/question.length)*100 ")
+    for (var x = 0; x < getoption.length; x++) {
 
 
-    //     //     }
-
-    //     // }
 
 
-    // }
+        if (getoption[x].checked) {
+
+            var selecval = getoption[x].value;
+          
+            var selques = questions[i - 1]["question"];
+            var selans = questions[i - 1][`option${selecval}`];
+
+            var corans = questions[i - 1]["correctAns"];
+   
+            console.log(selecval )
+   
+            console.log(selques )
+    console.log(selans )
+    console.log(corans )
+          
+            if (selans == corans) {
+
+                //  alert(score)
+                score++
+
+            }
+            // alert(selecval)
+        }
+
+        getoption[x].checked = false
+    }
+
+    btn.disabled = true
+
+
+
+    if(i >questions.length - 1){
+
+
+        if (score>=5){
+
+            Swal.fire(
+           
+                'Good job!',
+               `Your percentage is ${(score/questions.length*100)}`,
+                   'success'
+                 )
+       
+
+}else{
+            
+    Swal.fire(
+           
+        'Sorry',
+       `Your percentage is ${(score/questions.length*100)}`,
+           'error'
+         )
+           
+                
+            }
+            
+
+
+      
+        
+       
+    }else{
+
+
 
     ques.innerHTML = questions[i].question
     o1.innerHTML = questions[i].option1
@@ -120,7 +175,7 @@ function disques() {
 
     i++
 
-
+    }
 }
 
 

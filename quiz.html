@@ -5,37 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="p.css">
+
+
 </head>
 
-<body onload="disques()">
-
+<body onload="disques()" class="container">
+<h2>Quiz Application</h2>
 
     <div>
 
-        <p id="timr">2:00</p>
+        <p id="timr" class="timerDisplay">2:00</p>
 
     </div>
 
     <div>
-        <p id="q"> </p>
+  <b> <p id="q"> </p></b>
 
         <br>
 
-        <input type="radio" value="1" name="opt" onclick="clickd">
+        <input type="radio" value="1" name="opt" onclick="clickd()">
         <label id="r1"></label>
-        <br>
-        <input type="radio" value="1" name="opt" onclick="clickd">
+        <br>  <br>
+
+        <input type="radio" value="2" name="opt" onclick="clickd()">
         <label id="r2"></label>
         <br>
+        <br>
 
-        <input type="radio" value="1" name="opt" onclick="clickd">
+        <input type="radio" value="3" name="opt" onclick="clickd()">
         <label id="r3"></label>
 
         <br>
+        <br>
 
-        <button id="btn" disabled onclick="disques()">Next</button>
-
+      
     </div>
+
+    <button  class="buttons" id="btn" disabled onclick="disques()">Next</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="quiz.js"></script>
 </body>
